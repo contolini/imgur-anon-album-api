@@ -1,0 +1,11 @@
+{
+  "name": "imgur-scraper",
+  "version": "0.1.0",
+  "description": "Scrape an anonymous imgur album.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.9.8",
+    "request": "~2.45.0",
+    "cheerio": "~0.17.0"
+  }
+}
