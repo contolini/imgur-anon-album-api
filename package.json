@@ -1,11 +1,31 @@
 {
-  "name": "imgur-scraper",
+  "name": "imgur-anon-album-api",
   "version": "0.1.0",
-  "description": "Scrape an anonymous imgur album.",
+  "description": "Get images from an anonymous imgur album.",
   "main": "server.js",
   "dependencies": {
-    "express": "~4.9.8",
+    "cheerio": "~0.17.0",
     "request": "~2.45.0",
-    "cheerio": "~0.17.0"
-  }
+    "express": "~4.9.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contolini/imgur-anon-album-api"
+  },
+  "keywords": [
+    "imgur",
+    "album",
+    "api"
+  ],
+  "author": "Chris Contolini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/contolini/imgur-anon-album-api/issues"
+  },
+  "homepage": "https://github.com/contolini/imgur-anon-album-api"
 }
