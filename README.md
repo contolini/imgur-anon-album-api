@@ -1,7 +1,6 @@
 imgur-anon-album-api
 ======================
 
-## Introduction
 Imgur's API doesn't return images from anonymous albums. :( This simple scraper will do just that.
 
 ```bash
