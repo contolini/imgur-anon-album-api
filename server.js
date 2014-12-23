@@ -7,7 +7,7 @@ var data = {};
 app.set('port', process.env.PORT || 8080);
 app.get('/3/album/:id/images', function (req, res) {
 
-  var url = 'https://imgur.com/a/' + req.params.id + '/layout/grid';
+  var url = 'https://imgur.com/a/' + req.params.id;
 
   request(url, function (error, response, html) {
 
@@ -20,14 +20,15 @@ app.get('/3/album/:id/images', function (req, res) {
     var $ = cheerio.load(html);
     data.images = [];
 
-    $('.posts').find('.post').each(function () {
+    $('#image-container').find('.image').each(function () {
       var $this = $(this);
-      var link = $this.find('a').attr('href');
+      var $id = $this.attr('id');
       var image = {
-        id: $this.attr('id') || '',
-        link: link ? 'https:' + link : '',
+        id: $id || '',
+        link: 'https://i.imgur.com/' + $id + '.gif',
       };
-      if (image.link) {
+
+      if (image.id) {
         data.images.push(image);
       }
     });
